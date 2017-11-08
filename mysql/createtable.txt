@@ -1,0 +1,19 @@
+CREATE DATABASE `test` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+
+CREATE TABLE `xml_tbl` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` text DEFAULT NULL,
+  `opentime` datetime DEFAULT NULL,
+  `closetime` datetime DEFAULT NULL,
+  `status` varchar(10) DEFAULT NULL,
+  `del_flg` char(1) NOT NULL DEFAULT '0',
+  `insert_date` datetime DEFAULT NULL,
+  `update_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8
+
+
+delete from xml_tbl;
+ALTER TABLE xml_tbl AUTO_INCREMENT = 1;
+SELECT auto_increment FROM information_schema.tables WHERE table_name = 'xml_tbl'; 
